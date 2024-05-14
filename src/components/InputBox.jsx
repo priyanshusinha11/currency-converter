@@ -23,8 +23,8 @@ function InputBox({
                     id={amountInputId}
                     className="outline-none w-full bg-transparent py-1.5 border-b-2 border-blue-400"
                     type="text"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
+                    inputMode="decimal"
+                    pattern="^\d*\.?\d{0,2}$"
                     placeholder="Amount"
                     min="0"
                     maxLength="10"
@@ -32,6 +32,7 @@ function InputBox({
                     value={amount}
                     onChange={(e) => onAmountChange && onAmountChange(e.target.value.replace(/^0+/, ''))}
                 />
+
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
                 <p className="text-black/40 mb-2 w-full">Currency Type</p>
