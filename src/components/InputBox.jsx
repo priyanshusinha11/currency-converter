@@ -21,13 +21,13 @@ function InputBox({
                 </label>
                 <input
                     id={amountInputId}
-                    className="outline-none w-full bg-transparent py-1.5"
+                    className="outline-none w-full bg-transparent py-1.5 border-b-2 border-blue-400"
                     type="text"
-                    inputMode="numeric" 
-                    pattern="[0-9]*" 
+                    inputMode="numeric"
+                    pattern="[0-9]*"
                     placeholder="Amount"
                     min="0"
-                    maxLength="10" 
+                    maxLength="10"
                     disabled={amountDisable}
                     value={amount}
                     onChange={(e) => onAmountChange && onAmountChange(e.target.value.replace(/^0+/, ''))}

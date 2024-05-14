@@ -28,6 +28,7 @@ function App() {
       style={{ backgroundImage: `url('https://images.pexels.com/photos/1629172/pexels-photo-1629172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')` }}>
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+          <h1 className="text-center text-3xl font-bold mb-5 text-teal-950">Currency Converter</h1>
           <form onSubmit={(e) => {
             e.preventDefault();
             convert();
@@ -42,11 +43,13 @@ function App() {
                 onCurrencyChange={(currency) => setFrom(currency)}
               />
             </div>
-            <div className="relative w-full h-0.5">
-              <button type="button" className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5" onClick={swap}>
-                swap
+
+            <div className="relative w-full h-0.5 my-2">
+              <button type="button" className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-400 text-white px-3 py-1" onClick={swap}>
+                ↕️
               </button>
             </div>
+
             <div className="w-full mt-1 mb-4">
               <InputBox
                 label="To"
@@ -58,7 +61,7 @@ function App() {
                 amountDisable
               />
             </div>
-            <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+            <button type="submit" className="w-full bg-blue-400 text-white px-4 py-3 rounded-lg">
               Convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
           </form>
